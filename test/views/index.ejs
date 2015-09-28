@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>FIle Upload</title>
+</head>
+<body>
+	<div id="upload">
+		<div class="drag-area" style="width:200px; height:200px; border:1px solid #ddd;">
+			
+		</div>
+		<input class="input-area" type="file" multiple>
+	</div>
+</body>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/H5FileUploader.js"></script>
+<script>
+	$(function(){
+
+		'use strict';
+
+		h5fileuploader({
+			dropContainer : $('#upload').find('.drag-area')[0],
+			fileInput: $('#upload').find('.input-area')[0],
+			uploadUrl : '/upload',
+			readFiles : function( files ){
+				console.log( files );
+			},
+			fileAdd : function( fileupload ){
+
+				fileupload.on({
+					onProgress : function( progress , fileSize , uploadedBytes ){
+						console.log( progress , fileSize , uploadedBytes );
+					},
+					onCompleted : function( res ){
+						console.log( res );
+					}
+				})
+			}
+		});
+
+
+	});
+</script>
+</html>
