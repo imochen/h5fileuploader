@@ -2,40 +2,72 @@
 
 > a plug-in for html5 file upload
 
+####test
+
+down load the folder test 
+
+use `npm install` to install nodejs packages
+
+then run `node index.js`
+
+open your broswer , type in `http://127.0.0.1:1103`
+
+####Config 
 ```html
 <script src='H5FileUploader.js'></script>
 <script>
 	h5fileuploader({
 
-		debug : flase, // default value is true . change it to false when release
+		// default value is true . change it to false when release
+		debug : flase, 
 
-		uploadUrl : 'url', //the address you post
+		//the address you post
+		uploadUrl : 'url', 
 
-		data : {}, //add your own fields for your file
+		//add your own fields for your file
+		data : {}, 
 
-		key : 'file', //the key of the file you upload , default value is 'file'
+		//the key of the file you upload , default value is 'file'
+		key : 'file', 
 
-		dropContainer : document.querySelector('.drop'),// the dom that you can drop your file in
+		// the dom that you can drop your file in
+		dropContainer : document.querySelector('.drop'),
 
-		fileInput : document.querySelector('input[type="file"]'), //file input 
+		//file input 
+		fileInput : document.querySelector('input[type="file"]'), 
 
-		maxActiveNumber : 1, // the max number allowed to be upload at the same time
+		// the max number allowed to be upload at the same time
+		maxActiveNumber : 1, 
 
-		dragenter : function(){}, //when you drag file enter the container
-		dragover : function(){}, // when you drag move over the container
-		dragleave : function(){}, // when you drag leave the container
-		drop : function(){}, //when you drop files in the container
+		//when you drag file enter the container
+		dragenter : function(){}, 
 
-		readFiles : function( files ){},  //when files start to be load
-		fileAdd : function( fileupload ){ //when a file add to queue,
+		// when you drag move over the container
+		dragover : function(){}, 
+
+		// when you drag leave the container
+		dragleave : function(){}, 
+
+		//when you drop files in the container
+		drop : function(){}, 
+
+		//when files start to be load
+		readFiles : function( files ){},  
+
+		//when a file add to queue,
+		fileAdd : function( fileupload ){ 
 
 			fileupload.on({
 
-				onStart : function(){}, // file start to upload
+				// file start to upload
+				onStart : function(){}, 
 
-				onProgress : function( progress , fileSize , uploadedBytes ){} // on uploading
+				// on uploading
+				onProgress : function( progress , fileSize , uploadedBytes ){} 
 
-				onCompleted : function( res ){} // on upload completed
+				// on upload completed
+				onCompleted : function( res ){} 
+
 			})
 
 		} 
