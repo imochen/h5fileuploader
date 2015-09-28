@@ -1,13 +1,9 @@
 #H5FileUploader
 
-> a file upload help for html5
+> a plug-in for html5 file upload
 
--	download the folder
+```html
+<script src='H5FileUploader.js'></script>
+```
 
--	use `npm install` to install the node package
-
--	then use `node index.js` to run the demo
-
--	open your broswer & typein `127.0.0.1:1103`
-
--	have fun , more documents are on the road
+also you can use 'AMD' or 'CMD' to load it;
