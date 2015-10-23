@@ -212,7 +212,7 @@
             };
 
             if ( data ) {
-                for (prop in data) {
+                for (var prop in data) {
                     if ( data.hasOwnProperty(prop) ) {
                         formData.append( prop , data[prop] );
                     }
